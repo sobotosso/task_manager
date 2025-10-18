@@ -1,25 +1,25 @@
-# Seznam pro ukládání úkolů
+# Seznam pro ukladani ukoli
 ukoly = []
 
+# Funkce pro pridani noveho ukolu
 def pridat_ukol():
-    # Funkce umožní přidat nový úkol
     while True:
-        nazev = input("Zadejte název úkolu: ").strip()
-        if nazev == "":
+        nazev_ukolu = input("Zadejte název úkolu: ").strip()
+        if nazev_ukolu == "":
             print("Zadal(a) jste prázdný název, zkuste to znovu.")
             continue
 
-        popis = input("Zadejte popis úkolu: ").strip()
-        if popis == "":
+        popis_ukolu = input("Zadejte popis úkolu: ").strip()
+        if popis_ukolu == "":
             print("Zadal(a) jste prázdný popis, zkuste to znovu.")
             continue
 
-        ukoly.append({"nazev": nazev, "popis": popis})
-        print(f"Úkol '{nazev}' byl přidán.")
+        ukoly.append({"nazev": nazev_ukolu, "popis": popis_ukolu})
+        print(f"Úkol '{nazev_ukolu}' byl přidán.")
         break
 
+# Funkce pro zobrazeni ulozenych ukolu
 def zobrazit_ukoly():
-    # Funkce vypíše všechny uložené úkoly
     if len(ukoly) == 0:
         print("Seznam úkolů je prázdný.")
     else:
@@ -27,8 +27,8 @@ def zobrazit_ukoly():
         for i in range(len(ukoly)):
             print(f"{i+1}. {ukoly[i]['nazev']} – {ukoly[i]['popis']}")
 
+# Funkce pro odstraneni ulozeneho ukolu
 def odstranit_ukol():
-    # Funkce odstraní úkol dle čísla
     if len(ukoly) == 0:
         print("Není co mazat – seznam je prázdný.")
         return
@@ -45,7 +45,6 @@ def odstranit_ukol():
         print("Musíte zadat číslo.")
 
 def hlavni_menu():
-    # Hlavní řídicí nabídka celého programu
     while True:
         print("\nSprávce úkolů")
         print("1. Přidat nový úkol")
