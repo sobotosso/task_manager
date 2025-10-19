@@ -1,4 +1,4 @@
-# Seznam pro ukladani ukoli
+# Seznam ukolu
 ukoly = []
 
 # Funkce pro pridani noveho ukolu
