@@ -6,12 +6,12 @@ def pridat_ukol():
     while True:
         nazev_ukolu = input("Zadejte název úkolu: ").strip()
         if nazev_ukolu == "":
-            print("Zadal(a) jste prázdný název, zkuste to znovu.")
+            print("Název úkolu nesmí být prázdný")
             continue
 
         popis_ukolu = input("Zadejte popis úkolu: ").strip()
         if popis_ukolu == "":
-            print("Zadal(a) jste prázdný popis, zkuste to znovu.")
+            print("Popis úkolu nesmí být prázdný")
             continue
 
         ukoly.append({"nazev": nazev_ukolu, "popis": popis_ukolu})
