@@ -30,7 +30,7 @@ def zobrazit_ukoly():
 # Funkce pro odstraneni ulozeneho ukolu
 def odstranit_ukol():
     if len(ukoly) == 0:
-        print("Není co mazat – seznam je prázdný.")
+        print("Seznam je prázdný.")
         return
 
     zobrazit_ukoly()
@@ -64,7 +64,7 @@ def hlavni_menu():
             print("Konec programu.")
             break
         else:
-            print("Neplatná volba, zkuste to znovu.")
+            print("Zadali jste neplatnou volbu, zadejte volbu znovu.")
 
 # Spuštění programu
 hlavni_menu()
